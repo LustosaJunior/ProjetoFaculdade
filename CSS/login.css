@@ -1,0 +1,51 @@
+body{
+    background-color: #7975df;
+    background-image: url("img/LoginBackground.png");/* Para a imagem atrás*/
+    background-repeat: no-repeat;/* Para repetir a imagem e cobrir falhas*/
+    background-size: auto;
+    background-position: bottom;
+} 
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+footer {
+    color: white;
+    text-align: center; 
+    font-style: italic;
+    font-size: 13px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.campo {
+    background: white;
+    border-radius: 10px;
+    padding: 15px; 
+    width: 500px;
+    margin: auto;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(rgba(19, 8, 8, 0.335), green, blue, alpha);
+}
+
+.enter{   
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    font-size: 22px; 
+    color: white;      
+}
+
+::placeholder{
+    font-size: 20px;
+}

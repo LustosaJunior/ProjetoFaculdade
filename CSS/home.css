@@ -1,0 +1,104 @@
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
+    max-width: 660px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+} 
+
+body{
+    background-repeat: no-repeat;/* Para repetir a imagem e cobrir falhas*/
+    background-color: rgb(121, 117, 223);
+}
+div#area {
+    font: normal 75px italic;
+    background: rgba(233, 81, 81, 0);
+    color: white;
+    width: 1300px;
+    height: 100px;
+    text-align: center;
+}
+.row{
+    margin-top: 10px;
+}
+h3{
+    font-style: italic;/* Estilo da letra 'noticias'*/
+    font-size: 50px;/* Tamanho da letra 'noticias'*/ 
+    color: rgb(241, 239, 239);/*Cor da 'noticias'*/
+}
+.imagem{
+    display: table-cell; /*Para ter algo do lado*/
+    float: left; /*Fluatuar na tela*/
+}
+.texto{
+    display: table-cell; /*Para ter algo do lado*/
+    float: left;/*Fluatuar na tela*/
+    width: 800px;/*Tamanho da distância pela imagem*/
+    margin-left: 20px;/*Dar um distânciamento da imagem*/
+}
+.menu ul{
+    list-style: none;/*Tira o ponto de tópico*/
+    padding: 0;
+}
+.menu ul li{
+    float: left;/*Deixa os links lado a lado*/
+}
+.menu a{
+    width: 200px;/*Comprimento do bloco*/
+    height: 30px;/*Altura do bloco*/
+    display: block;/*Respeitar os outros eventos*/
+    text-decoration: none;/*Tira o sublinhado*/
+    color: #fff;/*Cor da letra*/
+    font-size: 20px;/*Tamanho da letra*/
+    background-color: rgba(20, 11, 11, 0.438);/*Cor dos links */
+    text-align: center;/*Alinhar no meio os links*/
+}
+.menu ul ul{
+    position: absolute;/*Posição dos sub-menus*/
+    visibility: hidden;/*Desaparece sub-menus*/
+}
+.menu ul li:hover ul{
+    visibility: visible;/*Aparecer ao passar o mouse*/
+}
+.menu a:hover{
+    background-color: #f4f4f4;/*Fica branco quando o mouse está em cima*/
+    color:  rgba(41, 24, 24, 0.452);/*A cor diferente nos blocos de sub-menu*/
+}
+.menu ul ul li{
+    float: none;/*Sub-menu ficarem um embaixo de outro*/
+}
+h4{
+    color: #fff;
+}
+#btnCad:hover {
+    background-color: #e8ebea;
+}
+label{
+    color: white;
+}

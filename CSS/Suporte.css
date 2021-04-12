@@ -1,0 +1,44 @@
+body {
+    background-image: url("img/FundoPreto.jpg");/* Para a imagem atrás*/
+    background-repeat: repeat;/* Para repetir a imagem e cobrir falhas*/
+}
+h3 {
+    font-style: italic;/* Estilo da letra 'vacina certa' */
+    font-size: 50px;/* Tamanho da letra 'vacina certa' */
+    color: #fff;/*Cor da letra*/
+} 
+p {
+    font-size: 20px; 
+    color: #fff;/*Cor da letra*/
+}
+.menu ul{
+    list-style: none;/*Tira o ponto de tópico*/
+    padding: 0;
+}
+.menu ul li{
+    float: left;/*Deixa os links lado a lado*/
+}
+.menu a{
+    width: 200px;/*Comprimento do bloco*/
+    height: 30px;/*Altura do bloco*/
+    display: block;/*Respeitar os outros eventos*/
+    text-decoration: none;/*Tira o sublinhado*/
+    color: #fff;/*Cor da letra*/
+    font-size: 20px;/*Tamanho da letra*/
+    background-color: rgba(20, 11, 11, 0.438);/*Cor dos links */
+    text-align: center;/*Alinhar no meio os links*/
+}
+.menu ul ul{
+    position: absolute;/*Posição dos sub-menus*/
+    visibility: hidden;/*Desaparece sub-menus*/
+}
+.menu ul li:hover ul{
+    visibility: visible;/*Aparecer ao passar o mouse*/
+}
+.menu a:hover{
+    background-color: #f4f4f4;/*Fica branco quando o mouse está em cima*/
+    color:  rgba(41, 24, 24, 0.452);/*A cor diferente nos blocos de sub-menu*/
+}
+.menu ul ul li{
+    float: none;/*Sub-menu ficarem um embaixo de outro*/
+}
