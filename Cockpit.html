@@ -11,16 +11,15 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
-        <!-- DashBoard -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <!-- DataTable --> 
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
         <!-- CSS -->
-        <link href="CSS/Home.css" rel="stylesheet">
+        <link href="CSS/Cockpit.css" rel="stylesheet">
+
         <!-- JS -->
-        <script src="JS/Home.js"></script>
+        <script src="JS/Cockpit.js"></script>
         
     </head>
     <body>
@@ -47,13 +46,77 @@
         <div class="container">
             <br>
             <div class="panel-header">
-                <h2 style="font: normal 75px italic;background: rgba(233, 81, 81, 0);color: rgb(241, 239, 239);text-align: center;">DashBoard de apresentação</h2>
+                <h2 class="title">Cockpit</h2>
             </div>
             <br>
 
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-            </figure>
+            <div class="panel-body">
+                <div class="row"> 
+                    <div class="col-sm-4">
+                        <label for="txtNome">Nome do candidato</label>
+                        <input type="text" class="form-control" name="txtNome" id="txtNome">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="txtArea">Area de Interesse</label>
+                        <input type="text" class="form-control" name="txtArea" id="txtArea">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="txtUF">UF</label>
+                        <input type="text" class="form-control" name="txtUF" id="txtUF">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="txtCidade">Cidade</label>
+                        <input type="text" class="form-control" name="txtCidade" id="txtCidade">
+                    </div> 
+                </div>
+                <br><br>   
+
+                <table id="TableCVs" class="display" style="text-align: center" onclick="document.location.href= 'Edition.html'">
+                    <thead>
+                        <tr>
+                            <th>Nome do candidato</th>
+                            <th>Área de Interesse</th>
+                            <th>UF</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Decio Lustosa Cesar Junior</td>
+                            <td>TI</td>
+                            <td>SP</td>
+                            <td>Carapicuiba</td>
+                        </tr>
+                        <tr>
+                            <td>Damião Xavier da Silva</td>
+                            <td>TI</td>
+                            <td>SP</td>
+                            <td>Jandira</td>
+                        </tr>
+                        <tr>
+                            <td>Milenne Pereira Carvalho</td>
+                            <td>TI</td>
+                            <td>SP</td>
+                            <td>Osasco</td>
+                        </tr>
+                        <tr>
+                            <td>Ivan Erick Conceição Dos Santos</td>
+                            <td>TI</td>
+                            <td>SP</td>
+                            <td>Barueri</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div> 
+            <br><br>
+            <div class="panel-footer">
+                <div class="container">
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>
