@@ -21,7 +21,6 @@ function validacaoEmail(field) {
         (dominio.search(".")!=-1) &&
         (dominio.indexOf(".") >=1)&&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-        alert("E-mail válido");
     }
     else{
         alert("E-mail invalido");

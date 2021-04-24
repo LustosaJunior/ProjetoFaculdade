@@ -1,3 +1,7 @@
+function EdicaoDoTicket(ID){
+    document.location.href= `Edition.php?${ID}`;
+}
+
 $(document).ready( function () {
     var table = $('#TableCVs').DataTable();
 
@@ -10,7 +14,7 @@ $(document).ready( function () {
     } ); 
 
     $('#txtUF').on( 'keyup', function () {
-        table.search( this.value ).draw();
+        table.search( this.value ).draw(); 
     } ); 
 
     $('#txtCidade').on( 'keyup', function () {

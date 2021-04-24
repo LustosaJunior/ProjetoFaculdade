@@ -15,23 +15,23 @@
         <br>
         <nav class="menu"><!--Listas-->
             <ul>
-                <li><a href="Home.html">Home</a></li>
+                <li><a href="Home.php">Home</a></li>
 
-                <li><a href="Opening.html">Abertura</a>
+                <li><a href="Opening.php">Abertura</a>
 
-                <li><a href="Cockpit.html">Cockpit</a>
+                <li><a href="Cockpit.php">Cockpit</a>
 
-                <li><a href="TrabConosco.html">Trabalhe Conosco</a></li>
+                <li><a href="TrabConosco.php">Trabalhe Conosco</a></li>
 
-                <li><a href="Parceiros.html">Parceiros</a></li>
+                <li><a href="Parceiros.php">Parceiros</a></li>
 
-                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="Contato.php">Contato</a></li>
             </ul>
         </nav>
         <br><br>
         <fieldset>
             <legend><h2>Formulário de Contato</h2></legend>
-            <form name="formuser" action="Enviado.html" >
+            <form name="formuser" action="Enviado.php" >
                 <!--required faz a validação-->
                 Nome:<input type="text" name="nome" placeholder="Digite seu nome" required ><br><br>
                 Sexo:<br>

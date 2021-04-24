@@ -43,7 +43,7 @@
                         </div>
                         <br>
                         <div>
-                            <center><input type="button" class="enter" value="Entrar" onclick="document.location.href = 'Home.html'"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: white"></span></center>
+                            <center><input type="button" class="enter" value="Entrar" onclick="document.location.href = 'Home.php'"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: white"></span></center>
                         </div>
                     </div>
                     <div class="col-sm-3"></div>

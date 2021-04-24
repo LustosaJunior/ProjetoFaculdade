@@ -28,17 +28,17 @@
         
         <nav class="menu"><!--Listas-->
         <ul>
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Home</a></li>
 
-            <li><a href="Opening.html">Abertura</a>
+            <li><a href="Opening.php">Abertura</a>
                 
-            <li><a href="Cockpit.html">Cockpit</a>
+            <li><a href="Cockpit.php">Cockpit</a>
 
-            <li><a href="TrabConosco.html">Trabalhe Conosco</a></li>
+            <li><a href="TrabConosco.php">Trabalhe Conosco</a></li>
 
-            <li><a href="Parceiros.html">Parceiros</a></li>
+            <li><a href="Parceiros.php">Parceiros</a></li>
 
-            <li><a href="Contato.html">Contato</a></li>
+            <li><a href="Contato.php">Contato</a></li>
         </ul>
         </nav>
         <br>
@@ -71,7 +71,7 @@
                 </div>
                 <br><br>   
 
-                <table id="TableCVs" class="display" style="text-align: center" onclick="document.location.href= 'Edition.html'">
+                <table id="TableCVs" class="display" style="text-align: center">
                     <thead>
                         <tr>
                             <th>Nome do candidato</th>
@@ -81,30 +81,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Decio Lustosa Cesar Junior</td>
-                            <td>TI</td>
-                            <td>SP</td>
-                            <td>Carapicuiba</td>
-                        </tr>
-                        <tr>
-                            <td>Damião Xavier da Silva</td>
-                            <td>TI</td>
-                            <td>SP</td>
-                            <td>Jandira</td>
-                        </tr>
-                        <tr>
-                            <td>Milenne Pereira Carvalho</td>
-                            <td>TI</td>
-                            <td>SP</td>
-                            <td>Osasco</td>
-                        </tr>
-                        <tr>
-                            <td>Ivan Erick Conceição Dos Santos</td>
-                            <td>TI</td>
-                            <td>SP</td>
-                            <td>Barueri</td>
-                        </tr>
+                        <?php
+                            session_start(); 
+
+                            for($i = 0; $i < count($_SESSION['Tickets']); $i++){
+                                $txtNome = $_SESSION['Tickets'][$i]["txtNome"];
+                                $txtArea = $_SESSION['Tickets'][$i]["txtArea"];
+                                $txtUF = $_SESSION['Tickets'][$i]["txtUF"];
+                                $txtCidade = $_SESSION['Tickets'][$i]["txtCidade"];
+                                
+                                echo "
+                                    <tr onclick='EdicaoDoTicket(".$i.")'>
+                                        <td>".$txtNome."</td>
+                                        <td>".$txtArea."</td>
+                                        <td>".$txtUF."</td>
+                                        <td>".$txtCidade."</td>
+                                    </tr>
+                                ";
+                            }
+                        ?>
                     </tbody>
                 </table>
 
