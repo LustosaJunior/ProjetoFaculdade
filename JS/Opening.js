@@ -8,6 +8,51 @@ function Mascaras(){
     $("#txtCPF").mask("000.000.000-00");
 }
 
+function Cadastra(){
+    let campos = document.getElementsByClassName('Validacao');
+    let submita = 1;
+    
+    for(let i = 0;i < campos.length;i++){
+        
+        if(campos[i].value == ""){
+            campos[i].className = 'form-control Validacao erro';
+            submita = 0;
+        }else{
+            campos[i].className = 'form-control Validacao valido';
+        };
+
+        if(submita == 1){
+            document.getElementById('formAbertura').submit();
+        };
+    }
+}
+
+function ValidacaoCampos(){
+    let campos = document.getElementsByClassName('Validacao');
+
+    for(let i = 0;i < campos.length;i++){
+        if(campos[i].value == ""){
+            campos[i].className = 'form-control Validacao erro';
+            return;
+        }else{
+            campos[i].className = 'form-control Validacao valido';
+            return;
+        }
+    }
+}
+
+function ValidaCPF(){
+    cpf = document.getElementById('txtCPF').value;
+
+    if(cpf.length == 14){
+        return;
+    }else{
+        alert('CPF inválido');
+        document.getElementById('txtCPF').value = '';
+        return;
+    }
+}
+
 function validacaoEmail(field) {
     usuario = field.value.substring(0, field.value.indexOf("@"));
     dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);

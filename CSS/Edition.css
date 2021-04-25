@@ -1,3 +1,11 @@
+.erro{ 
+    border-color: red; 
+}
+
+.valido{ 
+    border-color: rgb(132, 235, 132); 
+}
+
 .highcharts-figure, .highcharts-data-table table {
     min-width: 320px; 
     max-width: 660px;

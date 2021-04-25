@@ -57,7 +57,7 @@
         </nav>
         <br>
 
-        <form action="CriarTicket.php" method="get">
+        <form id="formAbertura" name="formAbertura" action="CriarTicket.php" method="get">
             <div class="container">
                 <br>
                 <div class="panel-header">
@@ -68,49 +68,49 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="txtNome">Nome do candidato</label>
-                            <input type="text" class="form-control" name="txtNome" id="txtNome">
+                            <input type="text" class="form-control Validacao" name="txtNome" id="txtNome">
                         </div>
                         <div class="col-sm-4">
                             <label for="dtDateNasc">Data de nascimento</label>
-                            <input type="date" class="form-control" name="dtDateNasc" id="dtDateNasc">
+                            <input type="date" class="form-control Validacao" name="dtDateNasc" id="dtDateNasc">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="txtemail">E-mail</label>
-                            <input type="text" onblur="validacaoEmail(this)" class="form-control" name="txtemail" id="txtemail">
+                            <input type="text" onblur="validacaoEmail(this)" class="form-control Validacao" name="txtemail" id="txtemail">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtTelefone">Telefone</label>
-                            <input type="text" class="form-control" name="txtTelefone" id="txtTelefone">
+                            <input type="text" class="form-control Validacao" name="txtTelefone" id="txtTelefone">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtCEP">CEP</label>
-                            <input type="text" class="form-control" onblur="ViaCEP(this.value)" name="txtCEP" id="txtCEP">
+                            <input type="text" class="form-control Validacao" onblur="ViaCEP(this.value)" name="txtCEP" id="txtCEP">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-2">
                             <label for="txtUF">UF</label>
-                            <input type="text" class="form-control" name="txtUF" id="txtUF">
+                            <input type="text" class="form-control Validacao" name="txtUF" id="txtUF">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtCidade">Cidade</label>
-                            <input type="text" class="form-control" name="txtCidade" id="txtCidade">
+                            <input type="text" class="form-control Validacao" name="txtCidade" id="txtCidade">
                         </div> 
                         <div class="col-sm-3">
                             <label for="txtBairro">Bairro</label>
-                            <input type="text" class="form-control" name="txtBairro" id="txtBairro">
+                            <input type="text" class="form-control Validacao" name="txtBairro" id="txtBairro">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtLogradouro">Logradouro</label>
-                            <input type="text" class="form-control" name="txtLogradouro" id="txtLogradouro">
+                            <input type="text" class="form-control Validacao" name="txtLogradouro" id="txtLogradouro">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-3">
                             <label for="txtDateNasc">Gênero</label>
-                            <select name="Genero" class="form-control">
+                            <select name="slcGenero" id="slcGenero" class="form-control">
                                 <option value="Masc">Masculino</option>
                                 <option value="Fem" selected>Feminino</option>
                                 <option value="Outer">Outro</option>
@@ -118,11 +118,11 @@
                         </div>
                         <div class="col-sm-3">
                             <label for="txtCPF">CPF</label>
-                            <input type="text" class="form-control" name="txtCPF" id="txtCPF">
+                            <input type="text" onblur="ValidaCPF()" class="form-control Validacao" name="txtCPF" id="txtCPF">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtArea">Area de Interesse</label>
-                            <input type="text" class="form-control" name="txtArea" id="txtArea">
+                            <input type="text" class="form-control Validacao" name="txtArea" id="txtArea">
                         </div>
                     </div>
                 </div> 
@@ -130,7 +130,7 @@
                 <div class="panel-footer">
                     <div class="container">
                         <div class="col-sm">
-                            <input type="submit" class="form-control" id="btnCad" value="Cadastrar">
+                            <input type="button" class="form-control" onclick="Cadastra()" id="btnCad" name="btnCad" value="Cadastrar">
                         </div>
                     </div>
                 </div>

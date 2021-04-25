@@ -1,5 +1,5 @@
 function EdicaoDoTicket(ID){
-    document.location.href= `Edition.php?${ID}`;
+    document.location.href= `Edition.php?Ticket=${ID}`;
 }
 
 $(document).ready( function () {

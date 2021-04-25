@@ -2,8 +2,10 @@
 
 session_start();
 
+$hdnTicket = $_GET["hdnTicket"];
+
 //Criei um array simples para armazenar todas os dados e um array associativo com os dados de cada
-$_SESSION["Tickets"][] = $Ticket = [
+$_SESSION["Tickets"][$hdnTicket] = $Ticket = [
     'txtNome' => $_GET["txtNome"],
     'dtDateNasc' => $_GET["dtDateNasc"],
     'txtemail' => $_GET["txtemail"],
@@ -18,7 +20,7 @@ $_SESSION["Tickets"][] = $Ticket = [
     'txtArea' => $_GET["txtArea"]
 ];
 
-$_SESSION["TicketCriado"] = true;
+$_SESSION["TicketAtualizado"] = true;
 
-header('location: Opening.php');
+header('location: Edition.php?Ticket='.$hdnTicket);
 return;
