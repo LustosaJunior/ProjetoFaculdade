@@ -66,6 +66,7 @@
                 <br>
                 <div class="panel-body">
                     <div class="row">
+                        
                         <div class="col-sm-5">
                             <label for="txtNome">Nome do candidato</label>
                             <input type="text" class="form-control Validacao" name="txtNome" id="txtNome">
@@ -121,7 +122,7 @@
                             <input type="text" onblur="ValidaCPF()" class="form-control Validacao" name="txtCPF" id="txtCPF">
                         </div>
                         <div class="col-sm-3">
-                            <label for="txtArea">Area de Interesse</label>
+                            <label for="txtArea">Área de Interesse</label>
                             <input type="text" class="form-control Validacao" name="txtArea" id="txtArea">
                         </div>
                     </div>
@@ -130,7 +131,7 @@
                 <div class="panel-footer">
                     <div class="container">
                         <div class="col-sm">
-                            <input type="button" class="form-control" onclick="Cadastra()" id="btnCad" name="btnCad" value="Cadastrar">
+                            <input type="button" class="form-control btn btn-outline-warning" onclick="Cadastra()" id="btnCad" name="btnCad" value="Cadastrar">
                         </div>
                     </div>
                 </div>

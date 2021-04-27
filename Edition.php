@@ -54,55 +54,34 @@
             
             <div class="container">
                 <br>
-                <div class="panel-header">
-                    <h2 class="title">Edição</h2>
+                <div class="row">
+                    <h2 class="title">Dados do currículo</h2>
                 </div>
                 <br>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <label for="txtNome">Nome do candidato</label>
                             <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtNome" id="txtNome" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtNome"] ?>">
                         </div>
-                        <div class="col-sm-4">
-                            <label for="dtDateNasc">Data de nascimento</label>
-                            <input type="date" onblur="ValidacaoCampos()" class="form-control" name="dtDateNasc" id="dtDateNasc" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["dtDateNasc"] ?>">
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-sm-5">
                             <label for="txtemail">E-mail</label>
                             <input type="text" onblur="validacaoEmail(this); ValidacaoCampos()" class="form-control Validacao" name="txtemail" id="txtemail" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtemail"] ?>">
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="dtDateNasc">Data de nascimento</label>
+                            <input type="date" onblur="ValidacaoCampos()" class="form-control" name="dtDateNasc" id="dtDateNasc" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["dtDateNasc"] ?>">
                         </div>
                         <div class="col-sm-3">
                             <label for="txtTelefone">Telefone</label>
                             <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtTelefone" id="txtTelefone" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtTelefone"] ?>">
                         </div>
-                        <div class="col-sm-3">
-                            <label for="txtCEP">CEP</label>
-                            <input type="text" class="form-control Validacao" onblur="ViaCEP(this.value);ValidacaoCampos()" name="txtCEP" id="txtCEP" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtCEP"] ?>">
-                        </div>
-                    </div>
-                    <div class="row">
+                        
                         <div class="col-sm-2">
-                            <label for="txtUF">UF</label>
-                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtUF" id="txtUF" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtUF"] ?>">
-                        </div>
-                        <div class="col-sm-3">
-                            <label for="txtCidade">Cidade</label>
-                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtCidade" id="txtCidade" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtCidade"] ?>">
-                        </div> 
-                        <div class="col-sm-3">
-                            <label for="txtBairro">Bairro</label>
-                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtBairro" id="txtBairro" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtBairro"] ?>">
-                        </div>
-                        <div class="col-sm-3">
-                            <label for="txtLogradouro">Logradouro</label>
-                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtLogradouro" id="txtLogradouro" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtLogradouro"] ?>">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
                             <label for="txtDateNasc">Gênero</label>
                             <select name="slcGenero" id="slcGenero" class="form-control">
 
@@ -130,21 +109,70 @@
                                 ?>
                             </select>
                         </div>
+
                         <div class="col-sm-3">
                             <label for="txtCPF">CPF</label>
                             <input type="text" class="form-control Validacao" onblur="ValidaCPF(); ValidacaoCampos()" name="txtCPF" id="txtCPF" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtCPF"] ?>">
                         </div>
+
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-sm-3">
+                            <label for="txtNaturalidade">Naturalidade</label>
+                            <input type="text" class="form-control Validacao" onblur="ValidacaoCampos()" name="txtNaturalidade" id="txtNaturalidade" value="">
+                        </div>
+                        
                         <div class="col-sm-3">
                             <label for="txtArea">Área de Interesse</label>
                             <input type="text" class="form-control Validacao" onblur="ValidacaoCampos()" name="txtArea" id="txtArea" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtArea"] ?>">
                         </div>
+
+                        <div class="col-sm-3">
+                            <label for="txtPretSal">Pretensão salárial</label>
+                            <input type="text" class="form-control Validacao" onblur="ValidacaoCampos()" name="txtPretSal" id="txtPretSal" value="">
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <h2 class="title"> Endereço</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txtCEP">CEP</label>
+                            <input type="text" class="form-control Validacao" onblur="ViaCEP(this.value);ValidacaoCampos()" name="txtCEP" id="txtCEP" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtCEP"] ?>">
+                        </div>
+                        <div class="col-sm-1">
+                            <label for="txtUF">UF</label>
+                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtUF" id="txtUF" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtUF"] ?>">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="txtCidade">Cidade</label>
+                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtCidade" id="txtCidade" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtCidade"] ?>">
+                        </div> 
+                        <div class="col-sm-3">
+                            <label for="txtBairro">Bairro</label>
+                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtBairro" id="txtBairro" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtBairro"] ?>">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="txtLogradouro">Logradouro</label>
+                            <input type="text" onblur="ValidacaoCampos()" class="form-control Validacao" name="txtLogradouro" id="txtLogradouro" value="<?php echo $_SESSION["Tickets"][$_GET["Ticket"]]["txtLogradouro"] ?>">
+                        </div>
+                            
+                    </div>
+                    
+                    
                 </div> 
                 <br><br>
                 <div class="panel-footer">
                     <div class="container">
-                        <div class="col-sm">
-                            <input type="button" class="form-control" onclick="Atualiza()" id="btnAtualiza" name="btnAtualiza" value="Atualizar">
+                        <div class="row">
+                        <div class="col-sm-4"></div>
+                            <div class="col-sm-3">
+                                <input type="button" class="form-control btn btn-outline-warning" onclick="Atualiza()" id="btnAtualiza" name="btnAtualiza" value="Atualizar">
+                            </div>
                         </div>
                     </div>
                 </div>
