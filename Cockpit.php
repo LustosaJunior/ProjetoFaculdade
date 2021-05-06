@@ -82,7 +82,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            session_start(); 
+                            session_start();  
 
                             for($i = 0; $i < count($_SESSION['Tickets']); $i++){
                                 $txtNome = $_SESSION['Tickets'][$i]["txtNome"];
